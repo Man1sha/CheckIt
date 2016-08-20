@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CheckIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iHr-Cw-lEQ">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="128" image="logoPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-TB-8aX">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gCX-TB-8aX" secondAttribute="height" multiplier="5:2" id="WIJ-66-dkq"/>
+                                            <constraint firstAttribute="height" constant="128" id="vgk-fw-c2R"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRA-Fx-5bO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="WUb-4g-lTM"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Enter your Name:">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.97647058823529409" green="0.16078431372549021" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John Appleseed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lly-ea-OJX">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="n2l-Qy-8cS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22h-jW-HMK">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="zFX-eC-6WU"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Enter your Date of Birth:">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.97647058823529409" green="0.16078431372549021" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="F9V-eS-Bvu">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="216" id="hJZ-9p-OOa"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="492892530.040784">
+                                            <!--2016-08-14 18:35:30 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="birthdayPickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="l0H-XZ-Ohz"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1DQ-4g-7QH">
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Submit">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.97647058823529409" green="0.16078431372549021" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitInfoButton:" destination="BYZ-38-t0r" eventType="touchDown" id="liG-ca-3i4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lly-ea-OJX" firstAttribute="top" secondItem="SRA-Fx-5bO" secondAttribute="bottom" constant="15" id="6L4-Oa-BPt"/>
+                                    <constraint firstItem="F9V-eS-Bvu" firstAttribute="top" secondItem="22h-jW-HMK" secondAttribute="bottom" constant="15" id="pcr-uB-Rhb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1DQ-4g-7QH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="49v-v3-4gi"/>
+                            <constraint firstItem="F9V-eS-Bvu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7be-Iu-ZBK"/>
+                            <constraint firstItem="SRA-Fx-5bO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BDq-yL-saG"/>
+                            <constraint firstItem="gCX-TB-8aX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEJ-WF-wh0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iHr-Cw-lEQ" secondAttribute="bottom" constant="29" id="Vag-Zc-Af8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="iHr-Cw-lEQ" secondAttribute="leading" id="k1m-9K-eRn"/>
+                            <constraint firstItem="Lly-ea-OJX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kzb-V1-3zt"/>
+                            <constraint firstItem="iHr-Cw-lEQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="omZ-3O-FHZ"/>
+                            <constraint firstItem="22h-jW-HMK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u3g-zI-8ey"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="22h-jW-HMK" id="dYO-Lu-LtP"/>
+                        <outlet property="birthdayPicker" destination="F9V-eS-Bvu" id="BCQ-T2-LvL"/>
+                        <outlet property="nameLabel" destination="SRA-Fx-5bO" id="7CK-ft-Mp8"/>
+                        <outlet property="nameTextField" destination="Lly-ea-OJX" id="DLr-Mi-gxF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoPhoto" width="977" height="281"/>
+    </resources>
+</document>
